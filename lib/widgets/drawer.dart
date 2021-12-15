@@ -7,7 +7,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imageUrl =
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpaperaccess.com%2Fkai-beyblade&psig=AOvVaw05RWAHM8Bztf4FSZZ_drn3&ust=1639632364689000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJi6j96I5fQCFQAAAAAdAAAAABAD";
+        "https://avatars.githubusercontent.com/u/12619420?s=460&u=26db98cbde1dd34c7c67b85c240505a436b2c36d&v=4";
     return Drawer(
       child: Container(
         color: Colors.deepPurple,
