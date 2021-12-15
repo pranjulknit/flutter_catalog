@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 
@@ -30,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      // color: Colors.white,
       child: SingleChildScrollView(
         child: Form(
           key: _formkey,
@@ -53,9 +55,11 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     TextFormField(
+                     
                       decoration: InputDecoration(
                         hintText: "Enter username",
                         labelText: "Username",
+                      
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -73,6 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                       decoration: InputDecoration(
                         hintText: "Enter password",
                         labelText: "Password",
+                        
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -100,6 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                           alignment: Alignment.center,
                           child: changeButton
                               ? Icon(Icons.done, color: Colors.white)
+                              // ignore: prefer_const_constructors
                               : Text(
                                   "Login",
                                   style: TextStyle(

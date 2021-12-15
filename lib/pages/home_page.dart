@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/widgets/drawer.dart';
 
@@ -8,11 +10,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
+        elevation: 0.0,
         title: Text("Catalog App"),
       ),
       body: Center(
         child: Container(
-          child: Text("Welcome to 30 days of Flutter"),
+          child: Text("Welcome Pranjul "),
         ),
       ),
       drawer: MyDrawer(),
