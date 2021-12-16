@@ -14,6 +14,10 @@ class MyTheme {
         color: Colors.white,
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.black),
+        titleTextStyle: TextStyle(
+          color: Colors.black,
+          fontSize: 22,
+        ),
         textTheme: Theme.of(context).textTheme,
       ));
 
@@ -28,14 +32,16 @@ class MyTheme {
         color: Colors.black,
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.white),
-        textTheme: Theme.of(context).textTheme,
+        textTheme: Theme.of(context).textTheme.copyWith(
+            headline6:
+                context.textTheme.headline6!.copyWith(color: Colors.white)),
       ));
 
   //colors: prefer_const_constructors
 
-  static Color creamColor = Color(0xfff5f5f5);
+  static Color creamColor = const Color(0xfff5f5f5);
 
-  static Color darkBluishColor = Color(0xff403b58);
+  static Color darkBluishColor = const Color(0xff403b58);
 
   static Color darkCreamColor = Vx.gray900;
 
