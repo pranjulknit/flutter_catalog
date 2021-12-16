@@ -52,7 +52,6 @@ class CatalogItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              
               catalog.name.text.lg.color(MyTheme.darkBluishColor).make(),
               catalog.desc.text.textStyle(context.captionStyle).make(),
               10.heightBox,
@@ -68,7 +67,7 @@ class CatalogItem extends StatelessWidget {
                             MaterialStateProperty.all(MyTheme.darkBluishColor),
                         shape: MaterialStateProperty.all(StadiumBorder()),
                       ),
-                      child: "Buy".text.make(),
+                      child: "Add to cart".text.make(),
                     ),
                   ]).pOnly(right: 8.0),
             ],

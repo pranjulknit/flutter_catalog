@@ -13,7 +13,9 @@ class HomeDetailPage extends StatelessWidget {
     return SafeArea(
       bottom: false,
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+        ),
         backgroundColor: MyTheme.creamColor,
         bottomNavigationBar: Container(
           color: Colors.white,
@@ -29,8 +31,8 @@ class HomeDetailPage extends StatelessWidget {
                         MaterialStateProperty.all(MyTheme.darkBluishColor),
                     shape: MaterialStateProperty.all(StadiumBorder()),
                   ),
-                  child: "Buy".text.make(),
-                ).wh(100, 50),
+                  child: "Add to cart".text.make(),
+                ).wh(120, 50),
               ]).p32(),
         ),
         body: Column(
@@ -51,6 +53,10 @@ class HomeDetailPage extends StatelessWidget {
                     catalog.name.text.xl4.color(MyTheme.darkBluishColor).make(),
                     catalog.desc.text.textStyle(context.captionStyle).xl.make(),
                     10.heightBox,
+                    "Clita sanctus ut stet rebum sanctus magna dolor, ut takimata sed erat gubergren kasd stet voluptua diam et, sea lorem duo sea duo no sit sed et lorem, diam nonumy sit eirmod dolores clita lorem. Dolores sit diam diam sed, sed at et et ipsum lorem elitr sed eos lorem."
+                        .text
+                        .make()
+                        .p16(),
                   ]).py64(),
                 ),
               ),
