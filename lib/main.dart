@@ -7,6 +7,9 @@ import 'pages/cart_page.dart';
 import 'pages/home_page.dart';
 import 'widgets/themes.dart';
 
+
+
+
 void main() {
   runApp(VxState(store:MyStore(),
   child: MyApp()));
