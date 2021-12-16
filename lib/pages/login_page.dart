@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -16,8 +17,8 @@ class _LoginPageState extends State<LoginPage> {
 
   final _formkey = GlobalKey<FormState>();
 
- void  moveToHome(BuildContext context) async {
-     if (_formkey.currentState!.validate()) {
+  void moveToHome(BuildContext context) async {
+    if (_formkey.currentState!.validate()) {
       setState(() {
         changeButton = true;
       });
@@ -26,13 +27,13 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         changeButton = false;
       });
-     }
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      // color: Colors.white,
+      color: context.canvasColor,
       child: SingleChildScrollView(
         child: Form(
           key: _formkey,
@@ -55,11 +56,9 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     TextFormField(
-                     
                       decoration: InputDecoration(
                         hintText: "Enter username",
                         labelText: "Username",
-                      
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -77,7 +76,6 @@ class _LoginPageState extends State<LoginPage> {
                       decoration: InputDecoration(
                         hintText: "Enter password",
                         labelText: "Password",
-                        
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -92,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                       height: 40,
                     ),
                     Material(
-                      color: Colors.deepPurple,
+                      color: context.theme.buttonColor,
                       borderRadius:
                           BorderRadius.circular(changeButton ? 50 : 8),
                       child: InkWell(
