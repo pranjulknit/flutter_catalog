@@ -6,8 +6,7 @@ import 'package:flutter/material.dart';
 class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final imageUrl =
-        "https://avatars.githubusercontent.com/u/12619420?s=460&u=26db98cbde1dd34c7c67b85c240505a436b2c36d&v=4";
+    final imageUrl = "";
     return Drawer(
       child: Container(
         color: Colors.deepPurple,
