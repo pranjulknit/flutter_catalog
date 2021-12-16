@@ -2,11 +2,17 @@ import '../models/catalog.dart';
 import 'catalog.dart';
 
 class CartModel {
+
+  // singleton class
+  static final cartModel = CartModel._internal();
+  CartModel._internal();
+  factory CartModel() => cartModel;
+
   //catalog field
   late CatalogModel _catalog;
 
   // Collection of Ids - storeIds of eachItem
-  final List<int> _itemIds=[];
+  final List<int> _itemIds = [];
 
   CatalogModel get catalog => _catalog;
 
@@ -25,15 +31,13 @@ class CartModel {
       items.fold(0, (total, current) => total + current.price);
 
   //Add Item
-  void add(Item item){
+  void add(Item item) {
     _itemIds.add(item.id);
   }
 
   //Remove Item
 
-  void remove (Item item){
+  void remove(Item item) {
     _itemIds.remove(item.id);
   }
-
-
 }
