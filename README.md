@@ -1,7 +1,7 @@
 # flutter_catalog
 
-A new Flutter project.
 
+A catalog App with multi-screen functionalities. This app also consist dark and light background.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
